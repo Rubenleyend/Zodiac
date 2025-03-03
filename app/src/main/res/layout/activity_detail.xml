@@ -6,5 +6,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DetailActivity">
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    >
+    <ImageView
+        android:layout_width="200sp"
+        android:layout_height="200dp"
+        android:id="@+id/iconImageView"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nombre"
+        android:textAlignment="center"
+        />
+</LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
