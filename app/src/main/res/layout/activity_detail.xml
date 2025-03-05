@@ -18,9 +18,17 @@
         android:id="@+id/iconImageView"
         />
     <TextView
+        android:id="@+id/nameTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Nombre"
+        android:textAlignment="center"
+        />
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fecha"
         android:textAlignment="center"
         />
 </LinearLayout>

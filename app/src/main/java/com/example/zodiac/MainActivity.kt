@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 
 class MainActivity : AppCompatActivity() {
+    var horoscopeList: List<Horoscope> = Horoscope.horoscopeList
 
     lateinit var recyclerView: RecyclerView
 
@@ -31,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         val adapter = HoroscopeAdapter(Horoscope.horoscopeList) { position->
             val horoscope = Horoscope.horoscopeList[position]
             val intent = Intent(this, DetailActivity::class.java)
-            intent.putExtra("HOROSCOPE_ID", horoscope.id)
+            intent.putExtra(DetailActivity.EXTRA_HOROSCOPE_ID, horoscope.id)
             startActivity(intent)
         }
         recyclerView.adapter = adapter
@@ -52,7 +53,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onQueryTextChange(s: String): Boolean {
-                Log.i("MENU", s)
+                Log.i("SEARCH", s)
                 return false
             }
         })
